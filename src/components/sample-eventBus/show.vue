@@ -8,12 +8,13 @@ export default {
   name: 'Show',
   data() {
     return {
-      msg: 'showEvents',
+      msg: 1,
     };
   },
   mounted(){
     EventBus.$on('getTarget', target => {
       console.log(target);
+      this.msg += 1;
     });
   }
 };

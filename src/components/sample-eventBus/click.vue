@@ -1,7 +1,9 @@
 <template>
   <div class="click">
-    <div @click.stop.prevent="doClick(e)"><span>{{msg}}</span></div>
-    <div><show></show></div>
+    <div @click="doClick($event)"><span>{{msg}}</span></div>
+    <div>
+      <show></show>
+    </div>
   </div>
 </template>
 
@@ -17,7 +19,7 @@ export default {
     };
   },
   methods: {
-    doClick: function(event) {
+    doClick(event) {
       EventBus.$emit('getTarget', event.target);
     }
   },
