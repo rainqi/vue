@@ -1,6 +1,6 @@
 <template>
   <div class="click">
-    <div @click="doClick($event)"><span>{{msg}}</span></div>
+    <div @click="doClick" class="click__msg"><span>{{msg}}</span></div>
     <div>
       <show></show>
     </div>
@@ -19,7 +19,7 @@ export default {
     };
   },
   methods: {
-    doClick(event) {
+    doClick: function (event) {
       EventBus.$emit('getTarget', event.target);
     }
   },
@@ -30,6 +30,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="scss" scoped="" type="text/css">
+  @import "../sass/click.scss";
 </style>
