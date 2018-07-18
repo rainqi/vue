@@ -2,7 +2,6 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-
   </div>
 </template>
 
@@ -13,6 +12,8 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
+  },
+  methods: {
   },
 };
 </script>
@@ -27,8 +28,9 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
+  text-align: left;
 }
 a {
   color: #42b983;
